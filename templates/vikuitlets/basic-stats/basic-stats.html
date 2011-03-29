@@ -26,8 +26,8 @@ along with "vikuit".  If not, see <http://www.gnu.org/licenses/>.
 {% block vikuitlet_content %}
  
  
-Los siguientes datos son unas estad&iacute;sticas simples de Hispavox.<br/> 
-Las iremos ampliando segun Hispavox vaya creciendo.<br/><br/>
+Los siguientes datos son unas estad&iacute;sticas simples de {% if app.name %}{{ app.name }}{% endif %}.<br/> 
+Las iremos ampliando segun {% if app.name %}{{ app.name }}{% endif %} vaya creciendo.<br/><br/>
  
 		<ul>
 			<li><strong>{{ app.users }}</strong> {{ _('users') }}</li>
