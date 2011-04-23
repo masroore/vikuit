@@ -123,6 +123,7 @@ def main():
 									   ('/module/admin.categories',		AdminCategories),
 									   ('/module/admin.category.edit',	AdminCategoryEdit),
 									   ('/module/admin.users',			AdminUsers),
+									   ('/module/admin.cache',			AdminCache),
 									   ('/mail.queue',			MailQueue),
 									   ('/task.queue',			TaskQueue),
 									   #General

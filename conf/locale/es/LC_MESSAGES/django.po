@@ -1937,3 +1937,12 @@ msgstr "El contenido est&aacute; vacio"
 
 msgid "Send post"
 msgstr "Enviar mensaje"
+
+msgid "Manage cache"
+msgstr "Gestionar cache"
+
+msgid "Flush cache"
+msgstr "Vaciar cache"
+
+msgid "Cache is clean"
+msgstr "Cache est&aacute; vac&iacute;a"

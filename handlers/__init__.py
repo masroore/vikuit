@@ -31,6 +31,7 @@ from handlers.module.admin.AdminCategoryEdit import *
 from handlers.module.admin.AdminApplication import *
 from handlers.module.admin.CommunityAddRelated import *
 from handlers.module.admin.AdminUsers import *
+from handlers.module.admin.AdminCache import *
 
 # Articles
 from handlers.module.article.ArticleList import *

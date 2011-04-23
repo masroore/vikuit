@@ -19,19 +19,21 @@ along with "vikuit".  If not, see <http://www.gnu.org/licenses/>.
 
 {% extends "layouts/module-layout.html" %}
 
-{% block title %} {{ _('Administration') }} {% endblock %}
+{% block title %} {{ _('Manage cache') }} {% endblock %}
 
 {% block content %}
 	
-	<h1>{{ _('Administration') }}</h1>
-
+	<h1>{{ _('Manage cache') }}</h1>
+	{% if m %}
+		<p class="message">{{ _(m|escape) }}</p>
+	{% endif %}
 	<ul>
-	    <li><strong><a href="/module/admin.application">{{ _('Configure application') }}</a></strong></li>
-		<li><strong><a href="/module/community.add.related">{{ _('Bind community') }}</a></strong></li>
-		<li><strong><a href="/module/admin.categories">{{ _('Administrate categories') }}</a></strong></li>
-		<li><strong><a href="/module/admin.users">{{ _('Administrate users') }}</a></strong></li>
-		<li><strong><a href="/module/admin.cache">{{ _('Manage cache') }}</a></strong></li>
+		<li><strong>{{ _('items') }}:</strong> {{ cdItems|escape }}</li>
+		<li><strong>{{ _('bytes') }}:</strong> {{ cdBytes|escape }}</li>
+		<li><strong>{{ _('oldest_item_age') }}:</strong> {{ cdOldest|escape }}</li>
 	</ul>
 
-	Vikuit. Version: {% if app.version %}{{ app.version}} - {% endif %}
+	<form action="/module/admin.cache" method="post" accept-charset="utf-8">
+		<input type="submit" value="{{ _('Flush cache') }}" />
+	</form>
 {% endblock %}
